@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="_getAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_getAuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_getProductListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_getCategoryListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductTypeSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductTypeSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_getProductTypeSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getProductSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_getProductSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="downloadCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="downloadCountResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="_getAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:_getAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:_getAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:_getProductList" />
+  </wsdl:message>
+  <wsdl:message name="_getProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:_getProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:_getCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:_getCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getProductTypeSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:_getProductTypeSearch" />
+  </wsdl:message>
+  <wsdl:message name="_getProductTypeSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:_getProductTypeSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getProductSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:_getProductSearch" />
+  </wsdl:message>
+  <wsdl:message name="_getProductSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:_getProductSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadCountSoapIn">
+    <wsdl:part name="parameters" element="tns:downloadCount" />
+  </wsdl:message>
+  <wsdl:message name="downloadCountSoapOut">
+    <wsdl:part name="parameters" element="tns:downloadCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CaromaSoap">
+    <wsdl:operation name="_getAuthentication">
+      <wsdl:input message="tns:_getAuthenticationSoapIn" />
+      <wsdl:output message="tns:_getAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getProductList">
+      <wsdl:input message="tns:_getProductListSoapIn" />
+      <wsdl:output message="tns:_getProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <wsdl:input message="tns:_getCategoryListSoapIn" />
+      <wsdl:output message="tns:_getCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getProductTypeSearch">
+      <wsdl:input message="tns:_getProductTypeSearchSoapIn" />
+      <wsdl:output message="tns:_getProductTypeSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getProductSearch">
+      <wsdl:input message="tns:_getProductSearchSoapIn" />
+      <wsdl:output message="tns:_getProductSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadCount">
+      <wsdl:input message="tns:downloadCountSoapIn" />
+      <wsdl:output message="tns:downloadCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CaromaSoap" type="tns:CaromaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="_getAuthentication">
+      <soap:operation soapAction="http://tempuri.org/_getAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductList">
+      <soap:operation soapAction="http://tempuri.org/_getProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <soap:operation soapAction="http://tempuri.org/_getCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductTypeSearch">
+      <soap:operation soapAction="http://tempuri.org/_getProductTypeSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductSearch">
+      <soap:operation soapAction="http://tempuri.org/_getProductSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadCount">
+      <soap:operation soapAction="http://tempuri.org/downloadCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CaromaSoap12" type="tns:CaromaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="_getAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/_getAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductList">
+      <soap12:operation soapAction="http://tempuri.org/_getProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <soap12:operation soapAction="http://tempuri.org/_getCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductTypeSearch">
+      <soap12:operation soapAction="http://tempuri.org/_getProductTypeSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getProductSearch">
+      <soap12:operation soapAction="http://tempuri.org/_getProductSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadCount">
+      <soap12:operation soapAction="http://tempuri.org/downloadCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Caroma">
+    <wsdl:port name="CaromaSoap" binding="tns:CaromaSoap">
+      <soap:address location="http://caroma.designcontent.com.au/Caroma.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CaromaSoap12" binding="tns:CaromaSoap12">
+      <soap12:address location="http://caroma.designcontent.com.au/Caroma.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

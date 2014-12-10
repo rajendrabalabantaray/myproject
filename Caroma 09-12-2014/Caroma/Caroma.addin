@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+ 
+  <AddIn Type="Application">
+    <Name>Application Caroma</Name>
+    <Assembly>.\Caroma.dll</Assembly>
+    <FullClassName>Caroma.App</FullClassName>
+    <AddInId>604b1052-f742-4951-8576-c261d1993107</AddInId>
+    <ClientId>eb56dfd0-bf2c-4f8c-8db8-c493333cfed6</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription></VendorDescription>
+  </AddIn>
+</RevitAddIns>

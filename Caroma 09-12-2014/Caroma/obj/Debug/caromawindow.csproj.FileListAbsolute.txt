@@ -1,0 +1,14 @@
+E:\caroma proj\caromawindow\caromawindow\bin\Debug\caromawindow.exe.config
+E:\caroma proj\caromawindow\caromawindow\bin\Debug\caromawindow.exe
+E:\caroma proj\caromawindow\caromawindow\bin\Debug\caromawindow.pdb
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.csprojResolveAssemblyReference.cache
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.Form1.resources
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.Form2.resources
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.Properties.Resources.resources
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.csproj.GenerateResource.Cache
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.exe
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.pdb
+E:\caroma proj\caromawindow\caromawindow\obj\Debug\caromawindow.productDetails.resources
+C:\Users\rajendra\Desktop\caromawindow\caromawindow\bin\Debug\caromawindow.exe.config
+C:\Users\rajendra\Desktop\caromawindow\caromawindow\obj\Debug\caromawindow.exe
+C:\Users\rajendra\Desktop\caromawindow\caromawindow\obj\Debug\caromawindow.pdb
